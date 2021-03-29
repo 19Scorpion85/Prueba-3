@@ -6,4 +6,67 @@
     android:layout_height="match_parent"
     tools:context=".MainActivityMenu">
 
+    <Button
+        android:id="@+id/btnMant"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="20dp"
+        app:icon="@drawable/listacheck3"
+        app:layout_constraintBottom_toTopOf="@+id/btnLista"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegistro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="20dp"
+        app:icon="@drawable/agregar"
+        app:layout_constraintBottom_toTopOf="@+id/btnDescarga"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMant"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLista"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="400dp"
+        app:icon="@drawable/buscar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDescarga"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMant"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <Button
+        android:id="@+id/btnDescarga"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="400dp"
+        app:icon="@drawable/nube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnLista"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistro"
+        app:layout_constraintVertical_bias="0.243" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
