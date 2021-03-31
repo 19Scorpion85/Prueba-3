@@ -4,58 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/motor3"
     tools:context=".MainActivity1Motor">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="50dp"
+        android:text="MOTOR"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/c1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintVertical_bias="0.6" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/c1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="1. Aceite del motor: verificar nivel"
+        app:layout_constraintBottom_toTopOf="@+id/c2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <CheckBox
-                android:id="@+id/checkBox7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CheckBox" />
+    <CheckBox
+        android:id="@+id/c2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="2. Filtro de aire: verificar necesidad de reemplazo o limpieza"
+        app:layout_constraintBottom_toTopOf="@+id/c3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <CheckBox
-                android:id="@+id/checkBox8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CheckBox" />
-        </LinearLayout>
+    <CheckBox
+        android:id="@+id/c3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="3. Filtro de tela de la bomba alimentadora: limpiar"
+        app:layout_constraintBottom_toTopOf="@+id/c4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <CheckBox
+        android:id="@+id/c4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="4. Filtro de combustible: drenar agua"
+        app:layout_constraintBottom_toTopOf="@+id/c5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/c5"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="5. Sistema de refrigeración: verificar nivel del líquido y completar con la mezcla de agua y etilenoglicol (40%)"
+        app:layout_constraintBottom_toTopOf="@+id/c6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="283dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="125dp"
-                    android:layout_marginLeft="125dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="128dp"
-                    android:layout_marginRight="128dp"
-                    android:text="TextView" />
+    <CheckBox
+        android:id="@+id/c6"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="6.Verificas estado de aspas radiador"
+        app:layout_constraintBottom_toTopOf="@+id/c7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            </LinearLayout>
+    <CheckBox
+        android:id="@+id/c7"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="7. Correa del motor: verificar estado y tensión"
+        app:layout_constraintBottom_toTopOf="@+id/c8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        </LinearLayout>
+    <CheckBox
+        android:id="@+id/c8"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="146dp"
+        android:text="8. Fijación del motor: verificar apriete de soportes de goma"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Matrícula"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="311dp"
+        android:layout_marginLeft="311dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c8"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/guardar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
