@@ -31,7 +31,7 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:layout_marginBottom="10dp"
-        app:icon="@drawable/agregar"
+        app:icon="@drawable/agregar4"
         app:layout_constraintBottom_toTopOf="@+id/btnDescarga"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnMant"
