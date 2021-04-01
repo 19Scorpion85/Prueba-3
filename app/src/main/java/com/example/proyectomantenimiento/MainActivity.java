@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String mensaje="Usuario o contraseña incorrecto";
-                if(usuario.getText().toString().equals("mecanico") & pass.getText().toString().equals("123")){
+                if(usuario.getText().toString().equals("a") & pass.getText().toString().equals("1")){
                     Intent entrar=new Intent(MainActivity.this,MainActivityMenu.class);
                     startActivity(entrar);
                 }else{
