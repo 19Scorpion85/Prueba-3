@@ -7,21 +7,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity2EmbragueCaja extends AppCompatActivity {
+public class MainActivity8Electrico extends AppCompatActivity {
     Button entrar1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_activity2_embrague_caja);
+        setContentView(R.layout.activity_main_activity8_electrico);
 
-        entrar1=(Button)findViewById(R.id.btnSiguiente2);
+        entrar1=(Button)findViewById(R.id.btnFinalizar);
+
+
 
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent entrar=new Intent(MainActivity2EmbragueCaja.this,MainActivity3TransmicionDiferencial.class);
+                Intent entrar=new Intent(MainActivity8Electrico.this,MainActivityMenu.class);
                 startActivity(entrar);
             }
         });
+
+
+
     }
 }

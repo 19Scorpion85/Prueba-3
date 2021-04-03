@@ -11,26 +11,32 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:text="MOTOR"
         android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:textColor="@color/purple_700"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtPatente"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
 
     <CheckBox
         android:id="@+id/i1"
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/white"
         android:text="1. Aceite del motor: verificar nivel"
+        android:textColor="@color/black"
         android:textSize="16sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/i2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/i2"
@@ -38,19 +44,26 @@
         android:layout_height="60dp"
         android:text="2. Filtro de aire: verificar necesidad de reemplazo o limpieza"
         android:textSize="16sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/i3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/i1" />
 
     <CheckBox
         android:id="@+id/i3"
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:background="@color/white"
         android:text="3. Filtro de tela de la bomba alimentadora: limpiar"
+        android:textColor="@color/black"
         android:textSize="16sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/i4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/i2" />
 
     <CheckBox
         android:id="@+id/i4"
@@ -58,19 +71,25 @@
         android:layout_height="60dp"
         android:text="4. Filtro de combustible: drenar agua"
         android:textSize="16sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/i5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/i3" />
 
     <CheckBox
         android:id="@+id/i5"
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:background="@color/white"
         android:text="5. Sistema de refrigeración: verificar nivel del líquido y completar con la mezcla de agua y etilenoglicol (40%)"
+        android:textColor="@color/black"
         android:textSize="16sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/i6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/i4" />
 
     <CheckBox
         android:id="@+id/i6"
@@ -78,21 +97,27 @@
         android:layout_height="60dp"
         android:text="6.Verificas estado de aspas radiador"
         android:textSize="16dp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/i7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/i5" />
 
     <CheckBox
         android:id="@+id/i7"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_weight="1"
+        android:background="@color/white"
         android:text="7. Correa del motor: verificar estado y tensión"
+        android:textColor="@color/black"
         android:textSize="16dp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/i8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/i6" />
 
     <CheckBox
         android:id="@+id/i8"
@@ -101,42 +126,40 @@
         android:layout_marginBottom="100dp"
         android:text="8. Fijación del motor: verificar apriete de soportes de goma"
         android:textSize="16dp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/i7" />
 
     <EditText
         android:id="@+id/txtPatente"
         android:layout_width="123dp"
         android:layout_height="39dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginRight="52dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="18dp"
         android:ems="10"
         android:hint="Matrícula "
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/i1"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
-        android:id="@+id/btnSiguiente5"
+        android:id="@+id/btnSiguiente1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="57dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:layout_marginBottom="40dp"
         android:text="Siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/i8"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.777" />
 
     <ImageView
         android:id="@+id/imageView2"

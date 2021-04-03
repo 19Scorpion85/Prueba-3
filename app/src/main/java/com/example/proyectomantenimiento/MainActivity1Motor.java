@@ -16,7 +16,7 @@ public class MainActivity1Motor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity1_motor);
 
-        entrar1=(Button)findViewById(R.id.btnSiguiente5);
+        entrar1=(Button)findViewById(R.id.btnSiguiente1);
 
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
