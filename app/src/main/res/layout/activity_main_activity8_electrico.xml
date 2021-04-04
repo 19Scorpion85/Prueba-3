@@ -10,33 +10,26 @@
         android:id="@+id/imageView9"
         android:layout_width="70dp"
         android:layout_height="60dp"
-        android:layout_marginStart="315dp"
-        android:layout_marginLeft="315dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
-        android:layout_marginBottom="655dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.04"
         app:srcCompat="@drawable/icono_empresa" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="111dp"
         android:layout_height="25dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="300dp"
         android:text="Sistema eléctrico"
         android:textColor="@color/purple_700"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintBottom_toTopOf="@+id/i45"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,68 +45,68 @@
         app:layout_constraintVertical_bias="0.067" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/i45"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:text="45. Luces altas."
         android:textSize="16sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintBottom_toTopOf="@+id/i46"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/i46"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:text="46. Luces bajas."
         android:textSize="16sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
+        app:layout_constraintBottom_toTopOf="@+id/i47"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/i45" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/i47"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:text="47. Luces de estacionamiento."
         android:textSize="16sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintBottom_toTopOf="@+id/i48"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/i46" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/i48"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:text="48. Luz de freno."
         android:textSize="16sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
+        app:layout_constraintBottom_toTopOf="@+id/i49"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+        app:layout_constraintTop_toBottomOf="@+id/i47" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/i49"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:text="49. Luz de reversa + sonido."
         android:textSize="16sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox6"
+        app:layout_constraintBottom_toTopOf="@+id/i50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintTop_toBottomOf="@+id/i48" />
 
     <CheckBox
-        android:id="@+id/checkBox6"
+        android:id="@+id/i50"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginBottom="50dp"
@@ -123,7 +116,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintTop_toBottomOf="@+id/i49" />
 
     <Button
         android:id="@+id/btnFinalizar"
@@ -131,13 +124,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="279dp"
         android:layout_marginLeft="279dp"
-        android:layout_marginTop="53dp"
         android:layout_marginEnd="71dp"
         android:layout_marginRight="71dp"
         android:layout_marginBottom="194dp"
         android:text="FInalizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+        app:layout_constraintTop_toBottomOf="@+id/i50" />
 </androidx.constraintlayout.widget.ConstraintLayout>
