@@ -16,13 +16,13 @@ import java.util.Date;
 public class ConexionSQLliteHerper extends SQLiteOpenHelper {
 
 
-    public ConexionSQLliteHerper(@Nullable View.OnClickListener context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super((Context) context, name, factory, version);
+    public ConexionSQLliteHerper(Context context,String name,SQLiteDatabase.CursorFactory factory,int version) {
+        super(context, name, factory, version);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Utilidades.CREAR_TABLA_CHEQUEO);
+    public void onCreate(SQLiteDatabase BaseDeDatos) {
+        BaseDeDatos.execSQL(Utilidades.CREAR_TABLA_CHEQUEO);
     }
 
     @Override

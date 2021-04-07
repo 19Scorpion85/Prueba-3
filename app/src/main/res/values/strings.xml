@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Proyecto Mantenimiento</string>
+    <string name="txtTitulo1">MOTOR</string>
+    <string name="txtPatente">Patente</string>
+    <string name="i1">1. Aceite del motor: verificar nivel</string>
+    <string name="i2">2. Filtro de aire: verificar necesidad de reemplazo o limpieza</string>
+    <string name="i3">3. Filtro de tela de la bomba alimentadora: limpiar</string>
+    <string name="i4">4. Filtro de combustible: drenar agua</string>
+    <string name="i5">5. Sistema de refrigeración: verificar nivel del líquido y completar con la mezcla de agua y etilenoglicol (40%)</string>
+    <string name="i6">6.Verificas estado de aspas radiador</string>
+    <string name="i7">7. Correa del motor: verificar estado y tensión</string>
+    <string name="i8">I8. Fijación del motor: verificar apriete de soportes de goma</string>
+    <string name="btnSiguiente1">Siguiente</string>
+    <string name="btnGuardar1">Guardar</string>
+
 </resources>
