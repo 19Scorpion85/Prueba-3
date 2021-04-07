@@ -6,20 +6,21 @@ public class Chequeo  {
     private String patente;
     private Integer idChequeo;
     private String fechaRevision;
-    private String tipoRevision;
     private String estadoRevision;
     private String rutMecanico;
     private String obs;
 
-    public Chequeo(String patente, Integer idChequeo, String fechaRevision, String tipoRevision, String estadoRevision, String rutMecanico, String obs) {
+
+    public Chequeo(String patente, Integer idChequeo, String fechaRevision, String estadoRevision, String rutMecanico, String obs) {
         this.patente = patente;
         this.idChequeo = idChequeo;
         this.fechaRevision = fechaRevision;
-        this.tipoRevision = tipoRevision;
         this.estadoRevision = estadoRevision;
         this.rutMecanico = rutMecanico;
         this.obs = obs;
     }
+
+    public Chequeo(){    }
 
     public String getPatente() {
         return patente;
@@ -43,14 +44,6 @@ public class Chequeo  {
 
     public void setFechaRevision(String fechaRevision) {
         this.fechaRevision = fechaRevision;
-    }
-
-    public String getTipoRevision() {
-        return tipoRevision;
-    }
-
-    public void setTipoRevision(String tipoRevision) {
-        this.tipoRevision = tipoRevision;
     }
 
     public String getEstadoRevision() {

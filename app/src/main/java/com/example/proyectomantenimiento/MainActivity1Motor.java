@@ -48,7 +48,7 @@ public class MainActivity1Motor extends AppCompatActivity {
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Guardar();
                 Intent entrar=new Intent(MainActivity1Motor.this,MainActivity2EmbragueCaja.class);
                 startActivity(entrar);
             }
@@ -58,6 +58,8 @@ public class MainActivity1Motor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               Guardar();
+                Intent entrar=new Intent(MainActivity1Motor.this,MainActivityLista.class);
+                startActivity(entrar);
             }
         });
     }
@@ -66,13 +68,6 @@ public class MainActivity1Motor extends AppCompatActivity {
        //Conexión BD
           ConexionSQLliteHerper conn=new ConexionSQLliteHerper(this, "ChequeoBD",null,1);
           SQLiteDatabase BaseDeDatos = conn.getWritableDatabase();
-
-      //  public static final String CAMPO_PATENTE="patente";
-      //  public static final String CAMPO_IDCHEQUEO="idchequeo";
-       // public static final String CAMPO_FECHAREVISION="fecha";
-       // public static final String CAMPO_ESTADOREVISION="estadorevision";
-      //  public static final String CAMPO_RUTMECANICO="rutmecanico";
-       // public static final String CAMPO_OBS="obs";
 
         String pat=patente.getText().toString();
         Integer id1=1;
@@ -133,7 +128,7 @@ public class MainActivity1Motor extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
             agregar.put(Utilidades.CAMPO_IDCHEQUEO,id3);
             agregar.put(Utilidades.CAMPO_FECHAREVISION,date);
-            agregar.put(Utilidades.CAMPO_ESTADOREVISION,est1);
+            agregar.put(Utilidades.CAMPO_ESTADOREVISION,est3);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
         }else{
