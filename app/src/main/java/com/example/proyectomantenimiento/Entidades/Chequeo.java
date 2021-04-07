@@ -3,15 +3,15 @@ package com.example.proyectomantenimiento.Entidades;
 import java.util.Date;
 
 public class Chequeo  {
-    private Vehiculo patente;
+    private String patente;
     private Integer idChequeo;
-    private Date fechaRevision;
+    private String fechaRevision;
     private String tipoRevision;
-    private Boolean estadoRevision;
-    private Mecanico rutMecanico;
+    private String estadoRevision;
+    private String rutMecanico;
     private String obs;
 
-    public Chequeo(Vehiculo patente, Integer idChequeo, Date fechaRevision, String tipoRevision, Boolean estadoRevision, Mecanico rutMecanico, String obs) {
+    public Chequeo(String patente, Integer idChequeo, String fechaRevision, String tipoRevision, String estadoRevision, String rutMecanico, String obs) {
         this.patente = patente;
         this.idChequeo = idChequeo;
         this.fechaRevision = fechaRevision;
@@ -21,11 +21,11 @@ public class Chequeo  {
         this.obs = obs;
     }
 
-    public Vehiculo getPatente() {
+    public String getPatente() {
         return patente;
     }
 
-    public void setPatente(Vehiculo patente) {
+    public void setPatente(String patente) {
         this.patente = patente;
     }
 
@@ -37,11 +37,11 @@ public class Chequeo  {
         this.idChequeo = idChequeo;
     }
 
-    public Date getFechaRevision() {
+    public String getFechaRevision() {
         return fechaRevision;
     }
 
-    public void setFechaRevision(Date fechaRevision) {
+    public void setFechaRevision(String fechaRevision) {
         this.fechaRevision = fechaRevision;
     }
 
@@ -53,19 +53,19 @@ public class Chequeo  {
         this.tipoRevision = tipoRevision;
     }
 
-    public Boolean getEstadoRevision() {
+    public String getEstadoRevision() {
         return estadoRevision;
     }
 
-    public void setEstadoRevision(Boolean estadoRevision) {
+    public void setEstadoRevision(String estadoRevision) {
         this.estadoRevision = estadoRevision;
     }
 
-    public Mecanico getRutMecanico() {
+    public String getRutMecanico() {
         return rutMecanico;
     }
 
-    public void setRutMecanico(Mecanico rutMecanico) {
+    public void setRutMecanico(String rutMecanico) {
         this.rutMecanico = rutMecanico;
     }
 

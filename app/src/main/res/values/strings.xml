@@ -12,5 +12,6 @@
     <string name="i8">I8. Fijación del motor: verificar apriete de soportes de goma</string>
     <string name="btnSiguiente1">Siguiente</string>
     <string name="btnGuardar1">Guardar</string>
-
+    <string name="btnListar">Ver</string>
+    <string name="txtTituloLista">Estado de vehículos</string>
 </resources>
