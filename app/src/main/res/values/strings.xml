@@ -14,4 +14,13 @@
     <string name="btnGuardar1">Guardar</string>
     <string name="btnListar">Ver</string>
     <string name="txtTituloLista">Estado de vehículos</string>
+    <string name="txtPatente2">Patente</string>
+    <string name="txtModelo">Modelo</string>
+    <string name="txtCombustible">Combustible</string>
+    <string name="txtMotor">Motor</string>
+    <string name="txtChasis">Chasis</string>
+    <string name="txtKm">Km</string>
+    <string name="txtHrs">Hrs</string>
+    <string name="txtMin">Min</string>
+    <string name="txtGuardar2">Guardar</string>
 </resources>

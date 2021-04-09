@@ -26,13 +26,14 @@ public class MainActivityLista extends AppCompatActivity {
     ArrayList<String> listaInformacion;
     ConexionSQLliteHerper conn;
     TextView text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_lista);
 
-        lista=(ListView)findViewById(R.id.listChequeos);
-        text=(TextView)findViewById(R.id.txtLista);
+       // lista=(ListView)findViewById(R.id.listChequeos);
+      //  text=(TextView)findViewById(R.id.txtLista);
          conn=new ConexionSQLliteHerper(this, "ChequeoBD",null,1);
          mostrarChequeos();
 

@@ -1,6 +1,7 @@
 package com.example.proyectomantenimiento.Entidades;
 
 public class Vehiculo {
+
     private String patente;
     private String modelo;
     private Double combustible;
