@@ -23,4 +23,7 @@
     <string name="txtHrs">Hrs</string>
     <string name="txtMin">Min</string>
     <string name="txtGuardar2">Guardar</string>
+    <string name="txtHorasMotor">Horas Motor: </string>
+    <string name="txtRegistro">Registro Nuevo vehículo </string>
+
 </resources>

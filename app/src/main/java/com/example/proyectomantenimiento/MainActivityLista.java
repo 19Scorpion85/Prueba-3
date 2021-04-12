@@ -32,14 +32,16 @@ public class MainActivityLista extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_lista);
 
-       // lista=(ListView)findViewById(R.id.listChequeos);
-      //  text=(TextView)findViewById(R.id.txtLista);
-         conn=new ConexionSQLliteHerper(this, "ChequeoBD",null,1);
-         mostrarChequeos();
+        lista=(ListView)findViewById(R.id.listChequeo);
+        // text=(TextView)findViewById(R.id.txtLista);
+        // conn=new ConexionSQLliteHerper(this, "ChequeoBD",null,1);
+        mostrarChequeos();
 
+        //obtenerLista();
         ArrayAdapter adaptador=new ArrayAdapter(this, android.R.layout.simple_list_item_1,listaInformacion);
 
         lista.setAdapter(adaptador);
+
     }
 
     private void mostrarChequeos(){
@@ -51,7 +53,7 @@ public class MainActivityLista extends AppCompatActivity {
         Cursor cursor=BaseDeDatos.rawQuery("SELECT * FROM "+Utilidades.TABLA_CHEQUEO,null);
 
         while (cursor.moveToNext()){
-             chequeo=new Chequeo();
+            chequeo=new Chequeo();
             chequeo.setPatente(cursor.getString(0));
             chequeo.setIdChequeo(cursor.getInt(1));
             chequeo.setFechaRevision(cursor.getString(2));

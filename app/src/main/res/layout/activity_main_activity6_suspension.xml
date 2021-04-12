@@ -4,22 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="horizontal|vertical"
     tools:context=".MainActivity6Suspension">
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Suspensión Metálica"
-        android:textColor="@color/purple_700"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/i32"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -38,139 +24,122 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Patente:"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.094" />
 
-    <CheckBox
-        android:id="@+id/i32"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="75dp"
-        android:text="32. Suspensiones delantera y trasera: lubricar."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i33"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="410dp"
+        android:layout_height="454dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <CheckBox
-        android:id="@+id/i33"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="33. Grapas, soportes de ballestas, amortiguadores, gemelos, ojales y barras estabilizadoras: reapretar fijaciones."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i34"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i32" />
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suspensión Metálica"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <CheckBox
-        android:id="@+id/i34"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="34. Vehículo 8x4: reapretar suspensión."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i33" />
+        <CheckBox
+            android:id="@+id/i32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="32. Suspensiones delantera y trasera: lubricar."
+            android:textAlignment="inherit"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sistema de carga"
-        android:textColor="@color/purple_700"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/i35"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i34" />
+        <CheckBox
+            android:id="@+id/i33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="33. Grapas, soportes de ballestas, amortiguadores, gemelos, ojales y barras estabilizadoras: reapretar fijaciones."
+            android:textAlignment="inherit"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
-    <CheckBox
-        android:id="@+id/i35"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="35. Verificar estado de baterías."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i36"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        <CheckBox
+            android:id="@+id/i34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="34. Vehículo 8x4: reapretar suspensión."
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
-    <CheckBox
-        android:id="@+id/i36"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="36. Verificar estado de alternado."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i35" />
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sistema de carga"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Suspensión neumática"
-        android:textColor="@color/purple_700"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/i37"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i36" />
+        <CheckBox
+            android:id="@+id/i35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="35. Verificar estado de baterías."
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
-    <CheckBox
-        android:id="@+id/i37"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="37. Grapas, soportes de ballestas, ojales, amortiguadores, bolsas de aire, barra Panhard: reapretar fijación."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i38"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        <CheckBox
+            android:id="@+id/i36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="36. Verificar estado de alternado."
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
-    <CheckBox
-        android:id="@+id/i38"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="38. Bolsones de aire: limpiar y verificar estado."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i39"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i37" />
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suspensión neumática"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <CheckBox
-        android:id="@+id/i39"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="39. Válvula niveladora: verificar estado del vástago, verificar altura de la suspensión y regular si necesario."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/btnSiguiente6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i38" />
+        <CheckBox
+            android:id="@+id/i37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="37. Grapas, soportes de ballestas, ojales, amortiguadores, bolsas de aire, barra Panhard: reapretar fijación."
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/i38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="38. Bolsones de aire: limpiar y verificar estado."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i39"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="39. Válvula niveladora: verificar estado del vástago, verificar altura de la suspensión y regular si necesario."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnSiguiente6"
@@ -185,6 +154,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i39" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

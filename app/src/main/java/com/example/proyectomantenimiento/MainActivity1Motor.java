@@ -48,8 +48,8 @@ public class MainActivity1Motor extends AppCompatActivity {
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Guardar();
-                Intent entrar=new Intent(MainActivity1Motor.this,MainActivity2EmbragueCaja.class);
+               // Guardar();
+               Intent entrar=new Intent(MainActivity1Motor.this,MainActivity2EmbragueCaja.class);
                 startActivity(entrar);
             }
         });
@@ -58,8 +58,8 @@ public class MainActivity1Motor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               Guardar();
-                Intent entrar=new Intent(MainActivity1Motor.this,MainActivityLista.class);
-                startActivity(entrar);
+             //   Intent entrar=new Intent(MainActivity1Motor.this,MainActivityLista.class);
+               // startActivity(entrar);
             }
         });
     }
@@ -93,9 +93,9 @@ public class MainActivity1Motor extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
             //prueba
-            //   Toast toast = Toast.makeText(this, "c1 Ingresado: "+agregar, Toast.LENGTH_LONG);
-             //    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-             //   toast.show();
+               Toast toast = Toast.makeText(this, "c1 Ingresado: "+agregar, Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                toast.show();
         }else{
             est1="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -114,6 +114,11 @@ public class MainActivity1Motor extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est2);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+            //prueba
+               Toast toast = Toast.makeText(this, "c2 Ingresado: "+agregar, Toast.LENGTH_LONG);
+                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+               toast.show();
         }else{
             est2="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -131,6 +136,11 @@ public class MainActivity1Motor extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est3);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+            //prueba
+               Toast toast = Toast.makeText(this, "c3 Ingresado: "+agregar, Toast.LENGTH_LONG);
+                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+               toast.show();
+
         }else{
             est3="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -149,6 +159,10 @@ public class MainActivity1Motor extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est4);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+            //prueba
+               Toast toast = Toast.makeText(this, "c4 Ingresado: "+agregar, Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                toast.show();
         }else{
             est4="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -167,6 +181,11 @@ public class MainActivity1Motor extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est5);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+            //prueba
+               Toast toast = Toast.makeText(this, "c5 Ingresado: "+agregar, Toast.LENGTH_LONG);
+                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+               toast.show();
         }else{
             est5="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -185,6 +204,12 @@ public class MainActivity1Motor extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est6);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+            //prueba
+               Toast toast = Toast.makeText(this, "c6 Ingresado: "+agregar, Toast.LENGTH_LONG);
+                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+               toast.show();
+
         }else{
             est6="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -203,6 +228,13 @@ public class MainActivity1Motor extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est7);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+
+            //prueba
+               Toast toast = Toast.makeText(this, "c7 Ingresado: "+agregar, Toast.LENGTH_LONG);
+                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                toast.show();
+
         }else{
             est7="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -221,6 +253,10 @@ public class MainActivity1Motor extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est8);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+            //prueba
+                Toast toast = Toast.makeText(this, "c8 Ingresado: "+agregar, Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                toast.show();
         }else{
             est8="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
