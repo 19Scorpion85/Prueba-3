@@ -13,14 +13,12 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.proyectomantenimiento.Entidades.Mecanico;
 import com.example.proyectomantenimiento.Utilidades.Utilidades;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
-public class MainActivity1Motor extends AppCompatActivity {
+public class MainActivityChequeo1 extends AppCompatActivity {
 
     TextView patente;
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8;
@@ -49,7 +47,7 @@ public class MainActivity1Motor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                // Guardar();
-               Intent entrar=new Intent(MainActivity1Motor.this,MainActivity2EmbragueCaja.class);
+               Intent entrar=new Intent(MainActivityChequeo1.this, MainActivityChequeo2.class);
                 startActivity(entrar);
             }
         });

@@ -1,7 +1,14 @@
 <resources>
-    <string name="app_name">Proyecto Mantenimiento</string>
+    <string name="app_name">SMP</string>
     <string name="txtTitulo1">MOTOR</string>
     <string name="txtPatente">Patente</string>
+    <string name="txtTituloFrenos">Frenos</string>
+    <string name="txtTituloSuspMetalica">Suspensión Metálica</string>
+    <string name="txtTituloSistCarga">Sistema de carga</string>
+    <string name="txtTituloDirCubNeu">Dirección, cubo de rueda y neumáticos</string>
+    <string name="txtTituloAdblue">Adblue</string>
+    <string name="txtTituloCompTolva">Compartimiento Tolva</string>
+    <string name="txtTituloLista">Estado de vehículos</string>
 
     <string name="i1">1. Aceite del motor: verificar nivel.</string>
     <string name="i2">2. Filtro de aire: verificar necesidad de reemplazo o limpieza.</string>
@@ -53,14 +60,8 @@
     <string name="i48">48. Luz de freno.</string>
     <string name="i49">49. Luz de reversa + sonido.</string>
     <string name="i50">50. Bocina.</string>
-    <string name="txtTituloFrenos">Frenos</string>
-    <string name="txtTituloSuspMetalica">Suspensión Metálica</string>
-    <string name="txtTituloSistCarga">Sistema de carga</string>
 
-    <string name="btnSiguiente1">Siguiente</string>
-    <string name="btnGuardar1">Guardar</string>
-    <string name="btnListar">Ver</string>
-    <string name="txtTituloLista">Estado de vehículos</string>
+
     <string name="txtPatente2">Patente</string>
     <string name="txtModelo">Modelo</string>
     <string name="txtCombustible">Combustible</string>
@@ -72,5 +73,9 @@
     <string name="txtGuardar2">Guardar</string>
     <string name="txtHorasMotor">Horas Motor: </string>
     <string name="txtRegistro">Registro Nuevo vehículo </string>
+
+    <string name="btnSiguiente1">Siguiente</string>
+    <string name="btnGuardar1">Guardar</string>
+    <string name="btnListar">Ver</string>
 
 </resources>

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivityMenu extends AppCompatActivity {
     Button entrar1;
@@ -26,7 +25,7 @@ public class MainActivityMenu extends AppCompatActivity {
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Intent entrar=new Intent(MainActivityMenu.this,MainActivity1Motor.class);
+                    Intent entrar=new Intent(MainActivityMenu.this, MainActivityChequeo1.class);
                     startActivity(entrar);
 
             }

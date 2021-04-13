@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity8Electrico">
+    tools:context=".MainActivityChequeo6">
 
     <ImageView
         android:id="@+id/imageView9"
@@ -19,21 +25,6 @@
         app:srcCompat="@drawable/icono_empresa" />
 
     <TextView
-        android:id="@+id/textView20"
-        android:layout_width="111dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="300dp"
-        android:text="Sistema eléctrico"
-        android:textColor="@color/purple_700"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/i45"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,93 +35,93 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.067" />
 
-    <CheckBox
-        android:id="@+id/i45"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:text="45. Luces altas."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i46"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-    <CheckBox
-        android:id="@+id/i46"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="46. Luces bajas."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i47"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i45" />
-
-    <CheckBox
-        android:id="@+id/i47"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="47. Luces de estacionamiento."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i48"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i46" />
-
-    <CheckBox
-        android:id="@+id/i48"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="48. Luz de freno."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i49"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i47" />
-
-    <CheckBox
-        android:id="@+id/i49"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="49. Luz de reversa + sonido."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i50"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i48" />
-
-    <CheckBox
-        android:id="@+id/i50"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="50dp"
-        android:text="50. Bocina."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i49" />
-
-    <Button
-        android:id="@+id/btnFinalizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="279dp"
-        android:layout_marginLeft="279dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginRight="71dp"
-        android:layout_marginBottom="194dp"
-        android:text="FInalizar"
+    <LinearLayout
+        android:layout_width="319dp"
+        android:layout_height="392dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="204dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i50" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView9">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Sistema eléctrico"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/i45"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="45. Luces altas."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i46"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="46. Luces bajas."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i47"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="47. Luces de estacionamiento."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i48"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="48. Luz de freno."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i49"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="49. Luz de reversa + sonido."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50. Bocina."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFinalizar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="FInalizar" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

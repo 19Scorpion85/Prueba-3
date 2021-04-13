@@ -9,7 +9,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5DireccionYOtros">
+    tools:context=".MainActivityChequeo4">
 
     <ImageView
         android:id="@+id/imageView6"
@@ -53,7 +53,7 @@
             android:id="@+id/txtTituloDireccionCubosNeumaticos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dirección, Cubos de rueda, neumáticos"
+            android:text="@string/txtTituloDirCubNeu"
             android:textColor="@color/purple_700"
             android:textSize="18sp"
             android:textStyle="bold" />

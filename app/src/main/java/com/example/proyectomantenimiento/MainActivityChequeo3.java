@@ -7,24 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity8Electrico extends AppCompatActivity {
+public class MainActivityChequeo3 extends AppCompatActivity {
     Button entrar1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_activity8_electrico);
+        setContentView(R.layout.activity_main_activity3_transmicion_diferencial);
 
-        entrar1=(Button)findViewById(R.id.btnFinalizar);
+        entrar1=(Button)findViewById(R.id.btnSiguiente3);
 
 
 
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent entrar=new Intent(MainActivity8Electrico.this,MainActivityMenu.class);
+                Intent entrar=new Intent(MainActivityChequeo3.this, MainActivityChequeo4.class);
                 startActivity(entrar);
             }
         });
+
 
 
 

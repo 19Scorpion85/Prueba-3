@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="horizontal|vertical"
-    tools:context=".MainActivity6Suspension">
+    tools:context=".MainActivityChequeo5">
 
     <ImageView
         android:id="@+id/imageView7"
@@ -36,14 +42,13 @@
         android:id="@+id/linearLayout2"
         android:layout_width="403dp"
         android:layout_height="532dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginTop="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/textView16"
@@ -58,14 +63,14 @@
             android:id="@+id/i37"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="37. Grapas, soportes de ballestas, ojales, amortiguadores, bolsas de aire, barra Panhard: reapretar fijación."
+            android:text="@string/i37"
             android:textSize="16sp" />
 
         <CheckBox
             android:id="@+id/i38"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="38. Bolsones de aire: limpiar y verificar estado."
+            android:text="@string/i38"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -73,25 +78,72 @@
             android:id="@+id/i39"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="39. Válvula niveladora: verificar estado del vástago, verificar altura de la suspensión y regular si necesario."
+            android:text="@string/i39"
             android:textSize="16sp"
             android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTituloAdblue"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/i40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i40" />
+
+        <CheckBox
+            android:id="@+id/i41"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i41" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTituloCompTolva"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/i42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i42" />
+
+        <CheckBox
+            android:id="@+id/i43"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i43" />
+
+        <CheckBox
+            android:id="@+id/i44"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i44" />
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSiguiente6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Siguiente" />
+        </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnSiguiente6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="293dp"
-        android:layout_marginLeft="293dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="Siguiente"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
