@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity5DireccionYOtros">
@@ -12,26 +17,11 @@
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/icono_empresa" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dirección, Cubos de rueda, neumáticos"
-        android:textColor="@color/purple_700"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028" />
 
     <TextView
         android:id="@+id/textView12"
@@ -40,98 +30,144 @@
         android:text="Patente:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.022" />
 
-    <CheckBox
-        android:id="@+id/i26"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="200dp"
-        android:text="26. Verificar pernos de rueda"
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i27"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/i27"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="27. Dirección hidráulica: verificar nivel del líquido, pérdidas y estado de las mangueras, tuberías y conexiones."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i28"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i26" />
-
-    <CheckBox
-        android:id="@+id/i28"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="28. Junta universal de la columna de dirección: lubricar."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i29"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i27" />
-
-    <CheckBox
-        android:id="@+id/i29"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="29. Pernos maestros: lubricar."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i30"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i28" />
-
-    <CheckBox
-        android:id="@+id/i30"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:text="30. Verificar desgaste de neumaticos."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/i31"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i29" />
-
-    <Button
-        android:id="@+id/btnSiguiente5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="239dp"
-        android:layout_marginLeft="239dp"
-        android:layout_marginEnd="79dp"
-        android:layout_marginRight="79dp"
-        android:layout_marginBottom="64dp"
-        android:text="Siguiente"
+    <LinearLayout
+        android:layout_width="404dp"
+        android:layout_height="661dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="126dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i31" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-    <CheckBox
-        android:id="@+id/i31"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="58dp"
-        android:text="31. Reapretar tuercas de rueda."
-        android:textSize="16sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/btnSiguiente5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/i30" />
+        <TextView
+            android:id="@+id/txtTituloDireccionCubosNeumaticos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección, Cubos de rueda, neumáticos"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/i26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="26. Verificar pernos de rueda"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="27. Dirección hidráulica: verificar nivel del líquido, pérdidas y estado de las mangueras, tuberías y conexiones."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="28. Junta universal de la columna de dirección: lubricar."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30. Verificar desgaste de neumaticos."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="29. Pernos maestros: lubricar."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="31. Reapretar tuercas de rueda."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtTituloSuspMetalica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTituloSuspMetalica"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/i32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i32" />
+
+        <CheckBox
+            android:id="@+id/i33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i33" />
+
+        <CheckBox
+            android:id="@+id/i34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i34" />
+
+        <TextView
+            android:id="@+id/txtTituloSistCarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTituloSistCarga"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/i35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i35" />
+
+        <CheckBox
+            android:id="@+id/i36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i36" />
+
+        <LinearLayout
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSiguiente5"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Siguiente" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

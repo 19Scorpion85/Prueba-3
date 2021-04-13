@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2EmbragueCaja">
@@ -16,23 +22,22 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="90dp"
         android:layout_height="70dp"
-        android:layout_marginTop="60dp"
         android:layout_marginBottom="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/i9"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527"
+        app:layout_constraintVertical_bias="0.122"
         app:srcCompat="@drawable/icono_empresa" />
 
     <TextView
@@ -52,19 +57,21 @@
         android:id="@+id/linearLayout3"
         android:layout_width="381dp"
         android:layout_height="480dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="32dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.701">
+        app:layout_constraintVertical_bias="0.0">
 
         <CheckBox
             android:id="@+id/i9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="9. Embrague: verificar nivel de líquido"
+            android:text="@string/i9"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -72,7 +79,7 @@
             android:id="@+id/i10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10. Embrague: lubricar bujes del eje de la horquilla (vehículos de 15 a más toneladas)."
+            android:text="@string/i10"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -80,7 +87,7 @@
             android:id="@+id/i11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="11. Verificar estado del cable de la toma de fuerza."
+            android:text="@string/i11"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -88,7 +95,7 @@
             android:id="@+id/i12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="12. Caja de cambios: verificar nivel de aceite y limpiar respiro."
+            android:text="@string/i12"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -96,7 +103,7 @@
             android:id="@+id/i13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="13. Caja de cambios: limpiar los tapones magneticos."
+            android:text="@string/i13"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -104,7 +111,7 @@
             android:id="@+id/i14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="14. Caja de cambios: cambiar aceite."
+            android:text="@string/i14"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -112,15 +119,24 @@
             android:id="@+id/i15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="15. Caja de cambios: lubricar articulaciones de control."
+            android:text="@string/i15"
             android:textSize="16sp"
             android:textStyle="italic" />
 
-        <Button
-            android:id="@+id/btnSiguiente2"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Siguiente" />
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSiguiente2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Siguiente" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

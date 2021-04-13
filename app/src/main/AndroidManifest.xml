@@ -13,7 +13,6 @@
         <activity android:name=".MainActivity7Adblue" />
         <activity android:name=".MainActivity6Suspension" />
         <activity android:name=".MainActivity5DireccionYOtros" />
-        <activity android:name=".MainActivity4Frenos" />
         <activity android:name=".MainActivity3TransmicionDiferencial" />
         <activity android:name=".MainActivity2EmbragueCaja" />
         <activity android:name=".MainActivityDescarga" />

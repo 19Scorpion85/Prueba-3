@@ -21,7 +21,7 @@ public class MainActivity3TransmicionDiferencial extends AppCompatActivity {
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent entrar=new Intent(MainActivity3TransmicionDiferencial.this,MainActivity4Frenos.class);
+                Intent entrar=new Intent(MainActivity3TransmicionDiferencial.this,MainActivity5DireccionYOtros.class);
                 startActivity(entrar);
             }
         });
