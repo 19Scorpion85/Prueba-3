@@ -4,18 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.proyectomantenimiento.Entidades.Chequeo;
 import com.example.proyectomantenimiento.Utilidades.Utilidades;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivityChequeo1 extends AppCompatActivity {
@@ -56,16 +61,18 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               Guardar();
+
              //   Intent entrar=new Intent(MainActivity1Motor.this,MainActivityLista.class);
                // startActivity(entrar);
             }
         });
+
     }
 
     public void Guardar(){
        //Conexión BD
           ConexionSQLliteHerper conn=new ConexionSQLliteHerper(this, "ChequeoBD",null,1);
-          SQLiteDatabase BaseDeDatos = conn.getWritableDatabase();
+          SQLiteDatabase db = conn.getWritableDatabase();
 
         String pat=patente.getText().toString();
         Integer id1=1;
@@ -80,6 +87,7 @@ public class MainActivityChequeo1 extends AppCompatActivity {
         String est1,est2,est3,est4,est5,est6,est7,est8;
         String rut="xxxxxxx-x";//prueba hasta conexión con webservice
         String obs="Sin observaciones";
+
         ContentValues agregar=new ContentValues();
 
         if(c1.isChecked()==true){
@@ -90,10 +98,14 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est1);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
             //prueba
-               Toast toast = Toast.makeText(this, "c1 Ingresado: "+agregar, Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                toast.show();
+           //    Toast toast = Toast.makeText(this, "c1 Ingresado: "+idResultante, Toast.LENGTH_LONG);
+             //   toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+               // toast.show();
+
         }else{
             est1="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -102,6 +114,8 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est1);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
+
         }
 
         if(c2.isChecked()==true){
@@ -112,11 +126,11 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est2);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
-
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
             //prueba
-               Toast toast = Toast.makeText(this, "c2 Ingresado: "+agregar, Toast.LENGTH_LONG);
-                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-               toast.show();
+         //      Toast toast = Toast.makeText(this, "c2 Ingresado: "+agregar, Toast.LENGTH_LONG);
+           //      toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+             //  toast.show();
         }else{
             est2="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -125,6 +139,9 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est2);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
+
         }
         if(c3.isChecked()==true){
             est3="Realizado";
@@ -134,10 +151,12 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est3);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
             //prueba
-               Toast toast = Toast.makeText(this, "c3 Ingresado: "+agregar, Toast.LENGTH_LONG);
-                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-               toast.show();
+           //    Toast toast = Toast.makeText(this, "c3 Ingresado: "+agregar, Toast.LENGTH_LONG);
+            //     toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+          //    toast.show();
 
         }else{
             est3="No realizado";
@@ -147,6 +166,8 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est3);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
         }
 
         if(c4.isChecked()==true){
@@ -157,10 +178,12 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est4);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
             //prueba
-               Toast toast = Toast.makeText(this, "c4 Ingresado: "+agregar, Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                toast.show();
+            //   Toast toast = Toast.makeText(this, "c4 Ingresado: "+agregar, Toast.LENGTH_LONG);
+            //    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+             //   toast.show();
         }else{
             est4="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -169,6 +192,8 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est4);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
         }
 
         if(c5.isChecked()==true){
@@ -179,11 +204,11 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est5);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
-
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
             //prueba
-               Toast toast = Toast.makeText(this, "c5 Ingresado: "+agregar, Toast.LENGTH_LONG);
-                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-               toast.show();
+            //   Toast toast = Toast.makeText(this, "c5 Ingresado: "+agregar, Toast.LENGTH_LONG);
+            //     toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+            //   toast.show();
         }else{
             est5="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -192,6 +217,7 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est5);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
         }
 
         if(c6.isChecked()==true){
@@ -202,11 +228,11 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est6);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
-
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
             //prueba
-               Toast toast = Toast.makeText(this, "c6 Ingresado: "+agregar, Toast.LENGTH_LONG);
-                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-               toast.show();
+             //  Toast toast = Toast.makeText(this, "c6 Ingresado: "+agregar, Toast.LENGTH_LONG);
+            //     toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+            //   toast.show();
 
         }else{
             est6="No realizado";
@@ -216,6 +242,7 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est6);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
         }
 
         if(c7.isChecked()==true){
@@ -226,12 +253,12 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est7);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
-
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
 
             //prueba
-               Toast toast = Toast.makeText(this, "c7 Ingresado: "+agregar, Toast.LENGTH_LONG);
-                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                toast.show();
+           //    Toast toast = Toast.makeText(this, "c7 Ingresado: "+agregar, Toast.LENGTH_LONG);
+            //     toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+             //   toast.show();
 
         }else{
             est7="No realizado";
@@ -241,6 +268,7 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est7);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
         }
 
         if(c8.isChecked()==true){
@@ -251,10 +279,12 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est8);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
             //prueba
-                Toast toast = Toast.makeText(this, "c8 Ingresado: "+agregar, Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                toast.show();
+            //    Toast toast = Toast.makeText(this, "c8 Ingresado: "+agregar, Toast.LENGTH_LONG);
+            //    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+             //   toast.show();
         }else{
             est8="No realizado";
             agregar.put(Utilidades.CAMPO_PATENTE,pat);
@@ -263,6 +293,7 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est8);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
+            Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
         }
 
         //prueba
@@ -271,6 +302,11 @@ public class MainActivityChequeo1 extends AppCompatActivity {
         //    toast.show();
 
     }
+
+
+
+
+
 
 
 }

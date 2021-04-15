@@ -9,6 +9,7 @@
     <string name="txtTituloAdblue">Adblue</string>
     <string name="txtTituloCompTolva">Compartimiento Tolva</string>
     <string name="txtTituloLista">Estado de vehículos</string>
+    <string name="txtTituloListaChequeo">Busqueda de registros</string>
 
     <string name="i1">1. Aceite del motor: verificar nivel.</string>
     <string name="i2">2. Filtro de aire: verificar necesidad de reemplazo o limpieza.</string>
@@ -77,5 +78,6 @@
     <string name="btnSiguiente1">Siguiente</string>
     <string name="btnGuardar1">Guardar</string>
     <string name="btnListar">Ver</string>
+    <string name="btnVerRegistros">Todos</string>
 
 </resources>

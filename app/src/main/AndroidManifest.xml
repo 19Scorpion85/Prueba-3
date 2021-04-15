@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoMantenimiento">
-        <activity android:name=".MainActivityChequeo6"></activity>
+        <activity android:name=".MainActivityLista"></activity>
+        <activity android:name=".MainActivityChequeo6" />
         <activity android:name=".MainActivityChequeo5" />
         <activity android:name=".MainActivityChequeo4" />
         <activity android:name=".MainActivityChequeo3" />
         <activity android:name=".MainActivityChequeo2" />
         <activity android:name=".MainActivityDescarga" />
-        <activity android:name=".MainActivityLista" />
         <activity android:name=".MainActivityRegistrosNuevos" />
         <activity android:name=".MainActivityChequeo1" />
         <activity android:name=".MainActivityMenu" />
