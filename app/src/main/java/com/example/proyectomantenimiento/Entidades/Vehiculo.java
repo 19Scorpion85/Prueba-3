@@ -7,11 +7,12 @@ public class Vehiculo {
     private Double combustible;
     private String motor;
     private String chasis;
-    private Double km;
-    private Integer horasMotor;
-    private Integer minutosMotor;
+    private int km;
+    private String horasMotor;
+    private int anio;
+    private String tipoCombustible;
 
-    public Vehiculo(String patente, String modelo, Double combustible, String motor, String chasis, Double km, Integer horasMotor, Integer minutosMotor) {
+    public Vehiculo(String patente, String modelo, Double combustible, String motor, String chasis, int km, String horasMotor, int anio, String tipoCombustible) {
         this.patente = patente;
         this.modelo = modelo;
         this.combustible = combustible;
@@ -19,8 +20,11 @@ public class Vehiculo {
         this.chasis = chasis;
         this.km = km;
         this.horasMotor = horasMotor;
-        this.minutosMotor = minutosMotor;
+        this.anio = anio;
+        this.tipoCombustible = tipoCombustible;
     }
+
+    public  Vehiculo(){}
 
     public String getPatente() {
         return patente;
@@ -62,27 +66,35 @@ public class Vehiculo {
         this.chasis = chasis;
     }
 
-    public Double getKm() {
+    public int getKm() {
         return km;
     }
 
-    public void setKm(Double km) {
+    public void setKm(int km) {
         this.km = km;
     }
 
-    public Integer getHorasMotor() {
+    public String getHorasMotor() {
         return horasMotor;
     }
 
-    public void setHorasMotor(Integer horasMotor) {
+    public void setHorasMotor(String horasMotor) {
         this.horasMotor = horasMotor;
     }
 
-    public Integer getMinutosMotor() {
-        return minutosMotor;
+    public int getAnio() {
+        return anio;
     }
 
-    public void setMinutosMotor(Integer minutosMotor) {
-        this.minutosMotor = minutosMotor;
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public String getTipoCombustible() {
+        return tipoCombustible;
+    }
+
+    public void setTipoCombustible(String tipoCombustible) {
+        this.tipoCombustible = tipoCombustible;
     }
 }

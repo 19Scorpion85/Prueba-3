@@ -30,4 +30,5 @@ public class ConexionSQLliteHerper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS CREAR_TABLA_CHEQUEO");
         onCreate(db);
     }
+
 }

@@ -11,21 +11,6 @@
         android:layout_height="match_parent"
         tools:context=".MainActivityRegistrosNuevos">
 
-        <TextView
-            android:id="@+id/txtRegistro"
-            android:layout_width="225dp"
-            android:layout_height="27dp"
-            android:text="@string/txtRegistro"
-            android:textColor="@color/purple_700"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.075" />
-
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="70dp"
@@ -40,33 +25,42 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="389dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
             android:layout_marginBottom="100dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/btnGuardar2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.168">
+            app:layout_constraintVertical_bias="0.038">
+
+            <TextView
+                android:id="@+id/txtRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtRegistro"
+                android:textColor="@color/purple_700"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtPatente2"
+                    android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtPatente2"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName3"
+                    android:id="@+id/txtCombustible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -81,15 +75,15 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtModelo"
+                    android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtModelo"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName6"
+                    android:id="@+id/txtKm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -103,15 +97,15 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName4"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtMotor"
+                    android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtMotor"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName5"
+                    android:id="@+id/txtChasis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -121,22 +115,22 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="267dp"
-                android:layout_height="55dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/txtHorasMotor"
-                    android:layout_width="123dp"
-                    android:layout_height="36dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/txtHorasMotor"
                     android:textColor="@color/material_on_background_disabled"
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/editTextNumber"
-                    android:layout_width="60dp"
+                    android:id="@+id/txtHrs"
+                    android:layout_width="95dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtHrs"
@@ -149,8 +143,8 @@
                     android:text=":" />
 
                 <EditText
-                    android:id="@+id/editTextNumber2"
-                    android:layout_width="60dp"
+                    android:id="@+id/txtMin"
+                    android:layout_width="95dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtMin"
@@ -163,10 +157,36 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
+                <EditText
+                    android:id="@+id/txtAnio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/txtAnio"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/txtTipoCombustible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/txTipoCombustible"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/btnGuardar2"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/btnGuardar1" />
             </LinearLayout>
 
