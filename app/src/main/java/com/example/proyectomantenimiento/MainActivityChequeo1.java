@@ -4,28 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.proyectomantenimiento.Entidades.Chequeo;
 import com.example.proyectomantenimiento.Utilidades.Utilidades;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivityChequeo1 extends AppCompatActivity {
 
     TextView patente;
+    Spinner patente2;
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8;
     Button entrar1;
     Button guardar1;
@@ -37,6 +33,8 @@ public class MainActivityChequeo1 extends AppCompatActivity {
 
       // Pantalla de chequeo MainActivity1Motor
         patente=(TextView)findViewById(R.id.txtPatente);
+        //patente=(Spinner)findViewById(R.id.SpPatente);
+
         c1=(CheckBox)findViewById(R.id.i1);
         c2=(CheckBox)findViewById(R.id.i2);
         c3=(CheckBox)findViewById(R.id.i3);
@@ -73,8 +71,11 @@ public class MainActivityChequeo1 extends AppCompatActivity {
        //Conexión BD
           ConexionSQLliteHerper conn=new ConexionSQLliteHerper(this, "ChequeoBD",null,1);
           SQLiteDatabase db = conn.getWritableDatabase();
-
+       // ArrayAdapter<CharSequence> adap=new ArrayAdapter();
         String pat=patente.getText().toString();
+
+
+
         Integer id1=1;
         Integer id2=2;
         Integer id3=3;

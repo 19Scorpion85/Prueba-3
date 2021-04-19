@@ -30,8 +30,9 @@ public class Utilidades {
     public static final String CAMPO_KM="km";
     public static final String CAMPO_HORAS="horas";
     public static final String CAMPO_ANIO="anio";
-    public static final String CAMPO_TIPO_COMBUSTIBLE="anio";
-    public static final String CREAR_TABLA_VEHICULO="CREATE TABLE "+TABLA_VEHICULO+"  ("+CAMPO_PATENTE_V+" TEXT," +
+    public static final String CAMPO_TIPO_COMBUSTIBLE="tipoComb";
+
+    public static final String CREAR_TABLA_VEHICULO="CREATE TABLE "+TABLA_VEHICULO+"  ("+CAMPO_PATENTE_V+" TEXT PRIMARY KEY," +
                                                                                      ""+CAMPO_MODELO+" TEXT," +
                                                                                      ""+CAMPO_COMBUSTIBLE+" FLOAT," +
                                                                                      ""+CAMPO_MOTOR+" TEXT, " +

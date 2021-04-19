@@ -11,6 +11,7 @@
     <string name="txtTituloCompTolva">Compartimiento Tolva</string>
     <string name="txtTituloLista">Estado de vehículos</string>
     <string name="txtTituloListaChequeo">Busqueda de registros</string>
+    <string name="txtTituloRegistro">Registro o actualzación de vehículos </string>
 
     <string name="i1">1. Aceite del motor: verificar nivel.</string>
     <string name="i2">2. Filtro de aire: verificar necesidad de reemplazo o limpieza.</string>
@@ -73,15 +74,16 @@
     <string name="txtMin">Min</string>
     <string name="txtGuardar2">Guardar</string>
     <string name="txtHorasMotor">Horas Motor: </string>
-    <string name="txtRegistro">Registro Nuevo vehículo </string>
+
     <string name="txtAnio">Año</string>
     <string name="txTipoCombustible">Tipo Combustible</string>
 
     <string name="btnSiguiente1">Siguiente</string>
     <string name="btnGuardar1">Guardar</string>
     <string name="btnListar">Ver</string>
-    <string name="btnVerRegistros">Ver Todo</string>
+    <string name="btnVerRegistros">Chequeos</string>
     <string name="btnBuscarRegistros">Buscar</string>
-
-
+    <string name="btnModificarRegistros">Modificar</string>
+    <string name="btnEliminarRegistros">Eliminar</string>
+    <string name="btnListaVehiculos">Vehículos</string>
 </resources>

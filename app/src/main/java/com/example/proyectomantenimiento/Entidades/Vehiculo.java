@@ -4,7 +4,7 @@ public class Vehiculo {
 
     private String patente;
     private String modelo;
-    private Double combustible;
+    private int combustible;
     private String motor;
     private String chasis;
     private int km;
@@ -12,7 +12,7 @@ public class Vehiculo {
     private int anio;
     private String tipoCombustible;
 
-    public Vehiculo(String patente, String modelo, Double combustible, String motor, String chasis, int km, String horasMotor, int anio, String tipoCombustible) {
+    public Vehiculo(String patente, String modelo, int combustible, String motor, String chasis, int km, String horasMotor, int anio, String tipoCombustible) {
         this.patente = patente;
         this.modelo = modelo;
         this.combustible = combustible;
@@ -25,6 +25,7 @@ public class Vehiculo {
     }
 
     public  Vehiculo(){}
+
 
     public String getPatente() {
         return patente;
@@ -42,11 +43,11 @@ public class Vehiculo {
         this.modelo = modelo;
     }
 
-    public Double getCombustible() {
+    public int getCombustible() {
         return combustible;
     }
 
-    public void setCombustible(Double combustible) {
+    public void setCombustible(int combustible) {
         this.combustible = combustible;
     }
 

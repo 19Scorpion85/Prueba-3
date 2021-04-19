@@ -25,8 +25,8 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="389dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="284dp"
             android:layout_marginTop="150dp"
             android:layout_marginBottom="100dp"
             android:orientation="vertical"
@@ -38,16 +38,17 @@
             app:layout_constraintVertical_bias="0.038">
 
             <TextView
-                android:id="@+id/txtRegistro"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtTituloRegistro"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txtRegistro"
+                android:gravity="center"
+                android:text="@string/txtTituloRegistro"
                 android:textColor="@color/purple_700"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -57,7 +58,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtPatente2"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/txtCombustible"
@@ -65,12 +67,13 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtCombustible"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -80,7 +83,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtModelo"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/txtKm"
@@ -88,11 +92,12 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtKm"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -102,7 +107,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtMotor"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/txtChasis"
@@ -110,7 +116,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtChasis"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -126,7 +133,7 @@
                     android:layout_weight="1"
                     android:text="@string/txtHorasMotor"
                     android:textColor="@color/material_on_background_disabled"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/txtHrs"
@@ -134,7 +141,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtHrs"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -148,13 +156,14 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/txtMin"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <EditText
@@ -164,7 +173,8 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="@string/txtAnio"
-                    android:inputType="textPersonName" />
+                    android:inputType="number"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/txtTipoCombustible"
@@ -173,11 +183,12 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="@string/txTipoCombustible"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="119dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
@@ -186,8 +197,20 @@
                     android:id="@+id/btnGuardar2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:text="@string/btnGuardar1" />
+
+                <Button
+                    android:id="@+id/btnModificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnModificarRegistros" />
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btnEliminarRegistros" />
             </LinearLayout>
 
         </LinearLayout>
