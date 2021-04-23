@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,9 +15,11 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.proyectomantenimiento.Entidades.Vehiculo;
 import com.example.proyectomantenimiento.Utilidades.Utilidades;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivityChequeo1 extends AppCompatActivity {
@@ -25,15 +29,20 @@ public class MainActivityChequeo1 extends AppCompatActivity {
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8;
     Button entrar1;
     Button guardar1;
+    ArrayList<String> listaPatente;
+    ArrayList<Vehiculo> patenteList;
+    ConexionSQLiteHerperVehiculo conn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity1_motor);
+        conn=new ConexionSQLiteHerperVehiculo(getApplicationContext(),"VehiculoBD",null,1);
 
       // Pantalla de chequeo MainActivity1Motor
         patente=(TextView)findViewById(R.id.txtPatente);
-        //patente=(Spinner)findViewById(R.id.SpPatente);
+
+        patente2=(Spinner)findViewById(R.id.SpPatente);
 
         c1=(CheckBox)findViewById(R.id.i1);
         c2=(CheckBox)findViewById(R.id.i2);
@@ -45,6 +54,12 @@ public class MainActivityChequeo1 extends AppCompatActivity {
         c8=(CheckBox)findViewById(R.id.i8);
         entrar1=(Button)findViewById(R.id.btnSiguiente1);
         guardar1=(Button)findViewById(R.id.btnGuardar1);
+
+        ConsultarListaVehiculos();
+    //    String [] opciones={"Seleccione Patente:","Prueba spinner"};
+        ArrayAdapter<CharSequence> adaptador=new ArrayAdapter(this, android.R.layout.simple_spinner_item,listaPatente);
+
+        patente2.setAdapter(adaptador);
 
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +74,6 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               Guardar();
-
              //   Intent entrar=new Intent(MainActivity1Motor.this,MainActivityLista.class);
                // startActivity(entrar);
             }
@@ -67,13 +81,42 @@ public class MainActivityChequeo1 extends AppCompatActivity {
 
     }
 
+    private void ConsultarListaVehiculos() {
+        SQLiteDatabase db=conn.getReadableDatabase();
+
+        Vehiculo vehiculo=null;
+        patenteList=new ArrayList<Vehiculo>();
+        Cursor cursor=db.rawQuery("SELECT * FROM "+Utilidades.TABLA_VEHICULO,null);
+
+        while(cursor.moveToNext()){
+            vehiculo=new Vehiculo();
+            vehiculo.setPatente(cursor.getString(0));
+
+            Log.i("",vehiculo.getPatente().toString());
+
+
+            patenteList.add(vehiculo);
+        }
+        obtenerListaPatente();
+
+    }
+
+    private void obtenerListaPatente() {
+        listaPatente= new ArrayList<String>();
+        listaPatente.add("Seleccione");
+
+        for(int i=0;i<patenteList.size();i++){
+            listaPatente.add(patenteList.get(i).getPatente());
+        }
+    }
+
     public void Guardar(){
        //Conexión BD
           ConexionSQLliteHerper conn=new ConexionSQLliteHerper(this, "ChequeoBD",null,1);
           SQLiteDatabase db = conn.getWritableDatabase();
        // ArrayAdapter<CharSequence> adap=new ArrayAdapter();
-        String pat=patente.getText().toString();
 
+        String pat=patente.getText().toString();
 
 
         Integer id1=1;
@@ -99,7 +142,6 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             agregar.put(Utilidades.CAMPO_ESTADOREVISION,est1);
             agregar.put(Utilidades.CAMPO_RUTMECANICO,rut);
             agregar.put(Utilidades.CAMPO_OBS,obs);
-
 
             Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
             //prueba

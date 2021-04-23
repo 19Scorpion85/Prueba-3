@@ -28,6 +28,7 @@ public class MainActivityRegistrosNuevos extends AppCompatActivity {
     TextView minMotor;
     TextView anio;
     TextView tipoCombustible;
+
     ConexionSQLiteHerperVehiculo conn=new ConexionSQLiteHerperVehiculo(this, "VehiculoBD",null,1);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,6 @@ public class MainActivityRegistrosNuevos extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 GuardarVehiculos();
-
             }
         });
 
@@ -61,7 +61,6 @@ public class MainActivityRegistrosNuevos extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EliminarVehiculo();
-
             }
         });
 
@@ -69,7 +68,6 @@ public class MainActivityRegistrosNuevos extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ActualizarVehiculo();
-
             }
         });
 
@@ -83,7 +81,6 @@ public class MainActivityRegistrosNuevos extends AppCompatActivity {
         Toast toast = Toast.makeText(this, "vehiculo eliminado correctamente", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.show();
-
     }
 
     private void ActualizarVehiculo() {
@@ -112,6 +109,8 @@ public class MainActivityRegistrosNuevos extends AppCompatActivity {
         actualizar.put(Utilidades.CAMPO_TIPO_COMBUSTIBLE,tipoComb);
 
         db.update(Utilidades.TABLA_VEHICULO,actualizar,Utilidades.CAMPO_PATENTE_V+"=?",parametros);
+
+        //Agregar alert dialog
         Toast toast = Toast.makeText(this, "vehiculo actualizado: "+actualizar, Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.show();
@@ -120,7 +119,6 @@ public class MainActivityRegistrosNuevos extends AppCompatActivity {
     }
 
     public  void GuardarVehiculos(){
-
 
         SQLiteDatabase db = conn.getWritableDatabase();
         Long idResultante;

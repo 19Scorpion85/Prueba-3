@@ -20,7 +20,7 @@ public class MainActivityLista extends AppCompatActivity {
 
     Button verRegistros;
     Button verVehiculos;
-
+//Probar menu
     ListView lvChequeo;
     ListView lvVehiculo;
     ArrayList<String> listaInformacion;
@@ -89,8 +89,6 @@ public class MainActivityLista extends AppCompatActivity {
         }
         obtenerLista();
     }
-
-
 
     private void obtenerLista() {
         listaInformacion=new ArrayList<String>();
