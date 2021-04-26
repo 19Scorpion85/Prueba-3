@@ -31,6 +31,7 @@ public class MainActivityLista extends AppCompatActivity {
     ArrayAdapter adapter2;
     ConexionSQLliteHerper conn;
     ConexionSQLiteHerperVehiculo conn2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +77,7 @@ public class MainActivityLista extends AppCompatActivity {
         SQLiteDatabase db=conn.getReadableDatabase();
         Chequeo cheq;//puede ser null
         listaChequeos=new ArrayList<Chequeo>();
-        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.TABLA_CHEQUEO,null);
+        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.TABLA_CHEQUEO+" order by 1 and 3",null);
         while (cursor.moveToNext()){
             cheq=new Chequeo();
             cheq.setPatente(cursor.getString(0));
@@ -95,20 +96,23 @@ public class MainActivityLista extends AppCompatActivity {
 
         for (int i=0;i<listaChequeos.size();i++){
             listaInformacion.add(" PATENTE: "+listaChequeos.get(i).getPatente()+"\n " +
-                                  "ID CHEQUEO: "+listaChequeos.get(i).getIdChequeo()+" \n " +
-                                  "FECHA REVISIÓN: "+listaChequeos.get(i).getFechaRevision()+"\n " +
-                                  "ESTADO: "+listaChequeos.get(i).getEstadoRevision()+"\n " +
-                                  "MECÁNICO: "+listaChequeos.get(i).getRutMecanico()+"\n " +
-                                  "OBS: "+listaChequeos.get(i).getObs());
+                                  "ID CHEQUEO: "+listaChequeos.get(i).getIdChequeo()+" \n "
+                            +
+                                 "FECHA REVISIÓN: "+listaChequeos.get(i).getFechaRevision()+"\n "
+                            //+
+                              //    "ESTADO: "+listaChequeos.get(i).getEstadoRevision()+"\n " +
+                              //    "MECÁNICO: "+listaChequeos.get(i).getRutMecanico()+"\n " +
+                             //     "OBS: "+listaChequeos.get(i).getObs()
+                         );
         }
     }
-
 
     private void consultarListaVehiculos() {
         SQLiteDatabase db=conn2.getReadableDatabase();
         Vehiculo ve;//puede ser null
         listaVehiculos=new ArrayList<Vehiculo>();
-        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.TABLA_VEHICULO,null);
+        String order="order by 1";
+        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.TABLA_VEHICULO+" order by 1",null);
         while (cursor.moveToNext()){
             ve=new Vehiculo();
             ve.setPatente(cursor.getString(0));
@@ -130,15 +134,17 @@ public class MainActivityLista extends AppCompatActivity {
         listaInformacionVehiculos=new ArrayList<String>();
 
         for (int i=0;i<listaVehiculos.size();i++){
-            listaInformacionVehiculos.add(" PATENTE: "+listaVehiculos.get(i).getPatente()+"\n" +
-                                          " MODELO: "+listaVehiculos.get(i).getModelo()+" \n " +
-                                           "COMBUSTIBLE: "+listaVehiculos.get(i).getCombustible()+"\n " +
-                                           "MOTOR: "+listaVehiculos.get(i).getMotor()+"\n " +
-                                           "CHASIS: "+listaVehiculos.get(i).getChasis()+"\n " +
-                                           "KMS: "+listaVehiculos.get(i).getKm()+"\n " +
-                                           "HORAS MOTOR: "+listaVehiculos.get(i).getHorasMotor()+"\n " +
-                                           "AÑO: "+listaVehiculos.get(i).getAnio()+"\n " +
-                                           "TIPO COMBUSTIBLE: "+listaVehiculos.get(i).getTipoCombustible());
+            listaInformacionVehiculos.add(" PATENTE: "+listaVehiculos.get(i).getPatente()+"\n"
+                            //+
+                                  //        " MODELO: "+listaVehiculos.get(i).getModelo()+" \n " +
+                                  //         "COMBUSTIBLE: "+listaVehiculos.get(i).getCombustible()+"\n " +
+                                 //          "MOTOR: "+listaVehiculos.get(i).getMotor()+"\n " +
+                                  //         "CHASIS: "+listaVehiculos.get(i).getChasis()+"\n " +
+                                  //         "KMS: "+listaVehiculos.get(i).getKm()+"\n " +
+                                  //         "HORAS MOTOR: "+listaVehiculos.get(i).getHorasMotor()+"\n " +
+                                  //         "AÑO: "+listaVehiculos.get(i).getAnio()+"\n " +
+                                  //         "TIPO COMBUSTIBLE: "+listaVehiculos.get(i).getTipoCombustible()
+                             );
         }
     }
 

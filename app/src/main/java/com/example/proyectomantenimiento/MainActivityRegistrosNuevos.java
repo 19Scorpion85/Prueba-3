@@ -81,6 +81,7 @@ public class MainActivityRegistrosNuevos extends AppCompatActivity {
         Toast toast = Toast.makeText(this, "vehiculo eliminado correctamente", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.show();
+        db.close();
     }
 
     private void ActualizarVehiculo() {
@@ -147,18 +148,11 @@ public class MainActivityRegistrosNuevos extends AppCompatActivity {
 
         db.insert(Utilidades.TABLA_VEHICULO,Utilidades.CAMPO_PATENTE_V,agregar);
 
-            //prueba
-       //     Toast toast = Toast.makeText(this, "Vehículo ingresado : "+idResultante, Toast.LENGTH_LONG);
-        //    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-        //    toast.show();
-
             Toast toast = Toast.makeText(this, "vehiculo Ingresado: "+agregar, Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
             toast.show();
 
         db.close();
-
-
     }
 
 

@@ -8,12 +8,15 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.proyectomantenimiento.Entidades.Vehiculo;
 import com.example.proyectomantenimiento.Utilidades.Utilidades;
@@ -24,7 +27,6 @@ import java.util.Calendar;
 
 public class MainActivityChequeo1 extends AppCompatActivity {
 
-    TextView patente;
     Spinner patente2;
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8;
     Button entrar1;
@@ -32,15 +34,13 @@ public class MainActivityChequeo1 extends AppCompatActivity {
     ArrayList<String> listaPatente;
     ArrayList<Vehiculo> patenteList;
     ConexionSQLiteHerperVehiculo conn;
+    String pat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity1_motor);
         conn=new ConexionSQLiteHerperVehiculo(getApplicationContext(),"VehiculoBD",null,1);
-
-      // Pantalla de chequeo MainActivity1Motor
-        patente=(TextView)findViewById(R.id.txtPatente);
 
         patente2=(Spinner)findViewById(R.id.SpPatente);
 
@@ -64,7 +64,6 @@ public class MainActivityChequeo1 extends AppCompatActivity {
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Guardar();
                Intent entrar=new Intent(MainActivityChequeo1.this, MainActivityChequeo2.class);
                 startActivity(entrar);
             }
@@ -74,11 +73,8 @@ public class MainActivityChequeo1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               Guardar();
-             //   Intent entrar=new Intent(MainActivity1Motor.this,MainActivityLista.class);
-               // startActivity(entrar);
             }
         });
-
     }
 
     private void ConsultarListaVehiculos() {
@@ -91,14 +87,10 @@ public class MainActivityChequeo1 extends AppCompatActivity {
         while(cursor.moveToNext()){
             vehiculo=new Vehiculo();
             vehiculo.setPatente(cursor.getString(0));
-
             Log.i("",vehiculo.getPatente().toString());
-
-
             patenteList.add(vehiculo);
         }
         obtenerListaPatente();
-
     }
 
     private void obtenerListaPatente() {
@@ -114,10 +106,8 @@ public class MainActivityChequeo1 extends AppCompatActivity {
        //Conexión BD
           ConexionSQLliteHerper conn=new ConexionSQLliteHerper(this, "ChequeoBD",null,1);
           SQLiteDatabase db = conn.getWritableDatabase();
-       // ArrayAdapter<CharSequence> adap=new ArrayAdapter();
 
-        String pat=patente.getText().toString();
-
+        pat=patente2.getSelectedItem().toString();
 
         Integer id1=1;
         Integer id2=2;
@@ -145,9 +135,6 @@ public class MainActivityChequeo1 extends AppCompatActivity {
 
             Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
             //prueba
-           //    Toast toast = Toast.makeText(this, "c1 Ingresado: "+idResultante, Toast.LENGTH_LONG);
-             //   toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-               // toast.show();
 
         }else{
             est1="No realizado";
@@ -340,9 +327,9 @@ public class MainActivityChequeo1 extends AppCompatActivity {
         }
 
         //prueba
-        //    Toast toast = Toast.makeText(this, "c1 Ingresado: "+agregar, Toast.LENGTH_LONG);
-        //     toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-        //    toast.show();
+        Toast toast = Toast.makeText(this, "Chequeo Ingresado Correctamentre: Patente "+pat, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.show();
 
     }
 
