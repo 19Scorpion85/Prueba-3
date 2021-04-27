@@ -99,8 +99,9 @@ public class MainActivityLista extends AppCompatActivity {
                                   "ID CHEQUEO: "+listaChequeos.get(i).getIdChequeo()+" \n "
                             +
                                  "FECHA REVISIÓN: "+listaChequeos.get(i).getFechaRevision()+"\n "
+                            +
+                                  "ESTADO: "+listaChequeos.get(i).getEstadoRevision()+"\n "
                             //+
-                              //    "ESTADO: "+listaChequeos.get(i).getEstadoRevision()+"\n " +
                               //    "MECÁNICO: "+listaChequeos.get(i).getRutMecanico()+"\n " +
                              //     "OBS: "+listaChequeos.get(i).getObs()
                          );

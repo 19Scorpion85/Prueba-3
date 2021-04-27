@@ -40,6 +40,7 @@ public class MainActivityChequeo1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity1_motor);
+
         conn=new ConexionSQLiteHerperVehiculo(getApplicationContext(),"VehiculoBD",null,1);
 
         patente2=(Spinner)findViewById(R.id.SpPatente);

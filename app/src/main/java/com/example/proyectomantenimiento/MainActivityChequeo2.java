@@ -4,18 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.proyectomantenimiento.Entidades.Vehiculo;
 import com.example.proyectomantenimiento.Utilidades.Utilidades;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivityChequeo2 extends AppCompatActivity {
@@ -25,12 +31,17 @@ public class MainActivityChequeo2 extends AppCompatActivity {
     CheckBox c1,c2,c3,c4,c5,c6,c7;
     MainActivityChequeo1 main1;
     String pat;
-
+    ConexionSQLiteHerperVehiculo conn;
+    Spinner patente2;
+    ArrayList<String> listaPatente;
+    ArrayList<Vehiculo> patenteList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity2_embrague_caja);
-        patente=(TextView)findViewById(R.id.txtPatenteTitulo2);
+        conn=new ConexionSQLiteHerperVehiculo(getApplicationContext(),"VehiculoBD",null,1);
+
+        patente2=(Spinner)findViewById(R.id.spPatente2);
         entrar1=(Button)findViewById(R.id.btnSiguiente2);
         guardar2=(Button)findViewById(R.id.btnGuardarAct2);
         c1=(CheckBox)findViewById(R.id.i9);
@@ -41,6 +52,11 @@ public class MainActivityChequeo2 extends AppCompatActivity {
         c6=(CheckBox)findViewById(R.id.i14);
         c7=(CheckBox)findViewById(R.id.i15);
        // mensaje=main1.patente2.getSelectedItem().toString();
+        ConsultarListaVehiculos();
+        //    String [] opciones={"Seleccione Patente:","Prueba spinner"};
+        ArrayAdapter<CharSequence> adaptador=new ArrayAdapter(this, android.R.layout.simple_spinner_item,listaPatente);
+
+        patente2.setAdapter(adaptador);
 
         entrar1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,12 +75,37 @@ public class MainActivityChequeo2 extends AppCompatActivity {
         });
     }
 
+    private void ConsultarListaVehiculos() {
+        SQLiteDatabase db=conn.getReadableDatabase();
+
+        Vehiculo vehiculo=null;
+        patenteList=new ArrayList<Vehiculo>();
+        Cursor cursor=db.rawQuery("SELECT * FROM "+Utilidades.TABLA_VEHICULO,null);
+
+        while(cursor.moveToNext()){
+            vehiculo=new Vehiculo();
+            vehiculo.setPatente(cursor.getString(0));
+            Log.i("",vehiculo.getPatente().toString());
+            patenteList.add(vehiculo);
+        }
+        obtenerListaPatente();
+    }
+
+    private void obtenerListaPatente() {
+        listaPatente= new ArrayList<String>();
+        listaPatente.add("Seleccione");
+
+        for(int i=0;i<patenteList.size();i++){
+            listaPatente.add(patenteList.get(i).getPatente());
+        }
+    }
+
     public void Guardar(){
         //Conexión BD
         ConexionSQLliteHerper conn=new ConexionSQLliteHerper(this, "ChequeoBD",null,1);
         SQLiteDatabase db = conn.getWritableDatabase();
 
-        pat=main1.patente2.getSelectedItem().toString();
+        pat=patente2.getSelectedItem().toString();
 
         Integer id1=9;
         Integer id2=10;
@@ -257,10 +298,7 @@ public class MainActivityChequeo2 extends AppCompatActivity {
             Long idResultante=db.insert(Utilidades.TABLA_CHEQUEO,Utilidades.CAMPO_IDCHEQUEO,agregar);
         }
 
-        //prueba
-        Toast toast = Toast.makeText(this, "Chequeo Ingresado Correctamentre: Patente "+pat, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-        toast.show();
+
 
     }
 
