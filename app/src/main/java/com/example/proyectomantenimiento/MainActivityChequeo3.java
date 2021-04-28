@@ -37,7 +37,11 @@ public class MainActivityChequeo3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity3_transmicion_diferencial);
+
+        conn=new ConexionSQLiteHerperVehiculo(getApplicationContext(),"VehiculoBD",null,1);
+
         guardar2=(Button)findViewById(R.id.btnGuardar3);
+
         c1=(CheckBox)findViewById(R.id.i16);
         c2=(CheckBox)findViewById(R.id.i17);
         c3=(CheckBox)findViewById(R.id.i18);
@@ -48,7 +52,8 @@ public class MainActivityChequeo3 extends AppCompatActivity {
         c8=(CheckBox)findViewById(R.id.i23);
         c9=(CheckBox)findViewById(R.id.i24);
         c10=(CheckBox)findViewById(R.id.i25);
-        conn=new ConexionSQLiteHerperVehiculo(getApplicationContext(),"VehiculoBD",null,1);
+
+
 
         patente2=(Spinner)findViewById(R.id.spPatente3);
 
@@ -76,7 +81,6 @@ public class MainActivityChequeo3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Guardar();
-
             }
         });
 

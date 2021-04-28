@@ -59,11 +59,16 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <Spinner
+            android:id="@+id/spPatente6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <CheckBox
             android:id="@+id/i45"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="45. Luces altas."
+            android:text="@string/i45"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -71,7 +76,7 @@
             android:id="@+id/i46"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="46. Luces bajas."
+            android:text="@string/i46"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -79,7 +84,7 @@
             android:id="@+id/i47"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="47. Luces de estacionamiento."
+            android:text="@string/i47"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -87,7 +92,7 @@
             android:id="@+id/i48"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="48. Luz de freno."
+            android:text="@string/i48"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -95,7 +100,7 @@
             android:id="@+id/i49"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="49. Luz de reversa + sonido."
+            android:text="@string/i49"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -103,23 +108,31 @@
             android:id="@+id/i50"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="50. Bocina."
+            android:text="@string/i50"
             android:textSize="16sp"
             android:textStyle="italic" />
 
         <LinearLayout
-            android:layout_width="154dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnGuardar6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnGuardar1" />
+
+            <Button
                 android:id="@+id/btnFinalizar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="FInalizar" />
+
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

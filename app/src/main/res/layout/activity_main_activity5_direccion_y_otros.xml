@@ -23,18 +23,6 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/icono_empresa" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Patente:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -49,6 +37,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <Spinner
+            android:id="@+id/spPatente4"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content" />
+
         <TextView
             android:id="@+id/txtTituloDireccionCubosNeumaticos"
             android:layout_width="wrap_content"
@@ -62,7 +55,7 @@
             android:id="@+id/i26"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="26. Verificar pernos de rueda"
+            android:text="@string/i26"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -70,7 +63,7 @@
             android:id="@+id/i27"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="27. Dirección hidráulica: verificar nivel del líquido, pérdidas y estado de las mangueras, tuberías y conexiones."
+            android:text="@string/i27"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -78,15 +71,7 @@
             android:id="@+id/i28"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="28. Junta universal de la columna de dirección: lubricar."
-            android:textSize="16sp"
-            android:textStyle="italic" />
-
-        <CheckBox
-            android:id="@+id/i30"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="30. Verificar desgaste de neumaticos."
+            android:text="@string/i28"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -94,7 +79,15 @@
             android:id="@+id/i29"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="29. Pernos maestros: lubricar."
+            android:text="@string/i29"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/i30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i30"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -102,7 +95,7 @@
             android:id="@+id/i31"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="31. Reapretar tuercas de rueda."
+            android:text="@string/i31"
             android:textSize="16sp"
             android:textStyle="italic" />
 
@@ -155,17 +148,27 @@
             android:text="@string/i36" />
 
         <LinearLayout
-            android:layout_width="154dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnSiguiente5"
-                android:layout_width="130dp"
+                android:id="@+id/btnGuardar4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Siguiente" />
+                android:layout_gravity="center"
+                android:text="@string/btnGuardar1" />
+
+            <Button
+                android:id="@+id/btnSiguiente5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/btnSiguiente1" />
+
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
