@@ -27,6 +27,7 @@ public class MainActivityChequeo5 extends AppCompatActivity {
 
     Button entrar1;
     Button guardar2;
+    Button menu;
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8;
     String pat;
     ConexionSQLiteHerperVehiculo conn;
@@ -41,7 +42,7 @@ public class MainActivityChequeo5 extends AppCompatActivity {
         conn=new ConexionSQLiteHerperVehiculo(getApplicationContext(),"VehiculoBD",null,1);
 
         guardar2=(Button)findViewById(R.id.btnGuardar5);
-
+        menu=(Button)findViewById(R.id.btnMenu5);
         c1=(CheckBox)findViewById(R.id.i37);
         c2=(CheckBox)findViewById(R.id.i38);
         c3=(CheckBox)findViewById(R.id.i39);
@@ -50,7 +51,6 @@ public class MainActivityChequeo5 extends AppCompatActivity {
         c6=(CheckBox)findViewById(R.id.i42);
         c7=(CheckBox)findViewById(R.id.i43);
         c8=(CheckBox)findViewById(R.id.i44);
-
 
         patente2=(Spinner)findViewById(R.id.spPatente5);
 
@@ -78,6 +78,15 @@ public class MainActivityChequeo5 extends AppCompatActivity {
                 Guardar();
             }
         });
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent entrar=new Intent(MainActivityChequeo5.this, MainActivityMenu.class);
+                startActivity(entrar);
+            }
+        });
+
 
     }
 

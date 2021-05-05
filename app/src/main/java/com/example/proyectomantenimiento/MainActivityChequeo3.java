@@ -26,6 +26,7 @@ import java.util.Calendar;
 public class MainActivityChequeo3 extends AppCompatActivity {
     Button entrar1;
     Button guardar2;
+    Button menu;
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8,c9,c10;
     String pat;
     ConexionSQLiteHerperVehiculo conn;
@@ -41,7 +42,7 @@ public class MainActivityChequeo3 extends AppCompatActivity {
         conn=new ConexionSQLiteHerperVehiculo(getApplicationContext(),"VehiculoBD",null,1);
 
         guardar2=(Button)findViewById(R.id.btnGuardar3);
-
+        menu=(Button)findViewById(R.id.btnMenu3);
         c1=(CheckBox)findViewById(R.id.i16);
         c2=(CheckBox)findViewById(R.id.i17);
         c3=(CheckBox)findViewById(R.id.i18);
@@ -66,7 +67,6 @@ public class MainActivityChequeo3 extends AppCompatActivity {
 
         patente2.setAdapter(adaptador);
 
-
         entrar1=(Button)findViewById(R.id.btnSiguiente3);
 
         entrar1.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +83,16 @@ public class MainActivityChequeo3 extends AppCompatActivity {
                 Guardar();
             }
         });
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent entrar=new Intent(MainActivityChequeo3.this, MainActivityMenu.class);
+                startActivity(entrar);
+            }
+        });
+
+
 
     }
 

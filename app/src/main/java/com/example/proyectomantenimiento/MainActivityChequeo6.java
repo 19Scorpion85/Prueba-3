@@ -27,14 +27,13 @@ public class MainActivityChequeo6 extends AppCompatActivity {
 
     Button entrar1;
     Button guardar2;
+
     CheckBox c1,c2,c3,c4,c5,c6;
     String pat;
     ConexionSQLiteHerperVehiculo conn;
     Spinner patente2;
     ArrayList<String> listaPatente;
     ArrayList<Vehiculo> patenteList;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

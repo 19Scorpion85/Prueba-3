@@ -27,6 +27,7 @@ import java.util.Calendar;
 public class MainActivityChequeo2 extends AppCompatActivity {
     Button entrar1;
     Button guardar2;
+    Button menu;
     TextView patente;
     CheckBox c1,c2,c3,c4,c5,c6,c7;
     MainActivityChequeo1 main1;
@@ -44,6 +45,7 @@ public class MainActivityChequeo2 extends AppCompatActivity {
         patente2=(Spinner)findViewById(R.id.spPatente2);
         entrar1=(Button)findViewById(R.id.btnSiguiente2);
         guardar2=(Button)findViewById(R.id.btnGuardarAct2);
+        menu=(Button)findViewById(R.id.btnMenu2);
         c1=(CheckBox)findViewById(R.id.i9);
         c2=(CheckBox)findViewById(R.id.i10);
         c3=(CheckBox)findViewById(R.id.i11);
@@ -73,6 +75,16 @@ public class MainActivityChequeo2 extends AppCompatActivity {
 
             }
         });
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent entrar=new Intent(MainActivityChequeo2.this, MainActivityMenu.class);
+                startActivity(entrar);
+            }
+        });
+
+
     }
 
     private void ConsultarListaVehiculos() {

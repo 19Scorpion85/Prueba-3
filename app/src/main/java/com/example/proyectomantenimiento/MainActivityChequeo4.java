@@ -26,6 +26,7 @@ import java.util.Calendar;
 public class MainActivityChequeo4 extends AppCompatActivity {
     Button entrar1;
     Button guardar2;
+    Button menu;
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11;
     String pat;
     ConexionSQLiteHerperVehiculo conn;
@@ -42,7 +43,7 @@ public class MainActivityChequeo4 extends AppCompatActivity {
         conn=new ConexionSQLiteHerperVehiculo(getApplicationContext(),"VehiculoBD",null,1);
 
         guardar2=(Button)findViewById(R.id.btnGuardar4);
-
+        menu=(Button)findViewById(R.id.btnMenu4);
         c1=(CheckBox)findViewById(R.id.i26);
         c2=(CheckBox)findViewById(R.id.i27);
         c3=(CheckBox)findViewById(R.id.i28);
@@ -83,6 +84,16 @@ public class MainActivityChequeo4 extends AppCompatActivity {
                 Guardar();
             }
         });
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent entrar=new Intent(MainActivityChequeo4.this, MainActivityMenu.class);
+                startActivity(entrar);
+            }
+        });
+
+
 
     }
 

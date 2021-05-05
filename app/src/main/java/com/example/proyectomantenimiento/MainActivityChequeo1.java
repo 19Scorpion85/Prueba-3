@@ -31,6 +31,7 @@ public class MainActivityChequeo1 extends AppCompatActivity {
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8;
     Button entrar1;
     Button guardar1;
+    Button menu;
     ArrayList<String> listaPatente;
     ArrayList<Vehiculo> patenteList;
     ConexionSQLiteHerperVehiculo conn;
@@ -55,6 +56,7 @@ public class MainActivityChequeo1 extends AppCompatActivity {
         c8=(CheckBox)findViewById(R.id.i8);
         entrar1=(Button)findViewById(R.id.btnSiguiente1);
         guardar1=(Button)findViewById(R.id.btnGuardar1);
+        menu=(Button)findViewById(R.id.btnMenu1);
 
         ConsultarListaVehiculos();
     //    String [] opciones={"Seleccione Patente:","Prueba spinner"};
@@ -76,6 +78,15 @@ public class MainActivityChequeo1 extends AppCompatActivity {
               Guardar();
             }
         });
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent entrar=new Intent(MainActivityChequeo1.this, MainActivityMenu.class);
+                startActivity(entrar);
+            }
+        });
+
     }
 
     private void ConsultarListaVehiculos() {

@@ -86,4 +86,5 @@
     <string name="btnModificarRegistros">Modificar</string>
     <string name="btnEliminarRegistros">Eliminar</string>
     <string name="btnListaVehiculos">Vehículos</string>
+    <string name="btnMenu">Menú</string>
 </resources>
